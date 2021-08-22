@@ -67,3 +67,15 @@ node_modules/
 
 #hugo
 public/
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+**/.firebase
+**/.firebaserc
+
+**/firebase-debug.log

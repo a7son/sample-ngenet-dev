@@ -1,18 +1,18 @@
-+++
-title = "Membuat Situs Web Statis dengan Hugo"
-date = 2021-08-05T14:59:17+07:00
-toc = true
-author = "Asep Sonjaya"
-comment = true
-tags = [
+---
+author: "Asep Sonjaya"
+title: "Membuat Situs Web Statis dengan Hugo"
+date: "2021-08-05T14:59:17+07:00"
+toc: true
+comment: true
+tags: [
     "hugo",    
 ]
-categories = [
+categories: [
     "hugo",
     "hugo",
 ]
-series = ["Hugo ROCKS"]
-+++
+series: ["Hugo ROCKS"]
+---
 
 **Hugo** adalah "generator" yang bisa membuat **[Situs Web](https://id.wikipedia.org/w/index.php?title=Situs_web)** Statis secara cepat dan modern, **Hugo** sendiri ditulis dalam bahasa **GO** dan dirancang agar pembuatan situs web bisa menjadi lebih mudah dan menyenangkan. gak lieur mikirin html, css, javascript kecuali kalau mau custom.
 
