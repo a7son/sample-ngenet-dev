@@ -1,10 +1,14 @@
 languageCode = 'en-us'
 title = 'ngeNET.dev'
-theme = 'minima'
+theme = 'PaperMod'
 paginate = 10
 copyright = "ngeNET.dev© Copyright notice"
 disqusShortname = "ngenet-dev"
 googleAnalytics = "G-BTF0SP511K"
+
+[minify]
+disableXML = true
+minifyOutput = true
 
 # Author has some of your information to be shown on the home 
 # page of your blog.
