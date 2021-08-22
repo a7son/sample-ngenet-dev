@@ -1,21 +1,31 @@
-- name: Check out code into the Go module directory
-  uses: actions/checkout@v2
-  with:
-    submodules: true  # Fetch Hugo themes (true OR recursive)
-    fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+name: Hugo
+on: [push]
 
-- name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: latest
-          # extended: true
+jobs:
 
-- name: Build
-  run: hugo
+build:
+  name: Build
+  runs-on: ubuntu-latest
+  steps:
+  
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-- name: Deploy to Firebase
-  uses: w9jds/firebase-action@master
-  with:
-    args: deploy --only hosting
-  env:
-    FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}          
+    - name: Setup Hugo
+            uses: peaceiris/actions-hugo@v2
+            with:
+              hugo-version: latest
+              # extended: true
+
+    - name: Build
+      run: hugo
+
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}          
