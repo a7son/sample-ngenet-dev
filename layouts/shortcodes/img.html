@@ -1,0 +1,5 @@
+{{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get 0)) }}
+<figure>
+  <img  class="md imgkecil" src="{{ $src.RelPermalink }}">
+</figure>
+  

@@ -1,0 +1,64 @@
+languageCode = 'en-us'
+title = 'ngeNET.dev'
+theme = 'minima'
+paginate = 10
+copyright = "ngeNET.dev© Copyright notice"
+disqusShortname = "ngenet-dev"
+googleAnalytics = "G-BTF0SP511K"
+
+# Author has some of your information to be shown on the home 
+# page of your blog.
+[author]
+name = "Asep Sonjaya"
+slogon = "ngeNet nyok 💻"
+description = "Blog sederhana saja, untuk belajar. 😁"
+
+[params]
+# iam is the beginning words of your self-introduction.
+iam = "Saya"
+# The subtitle will be shown after the title of your blog site
+#  in a format "title - subtitle".
+subtitle = ""
+# Comment decides the comment plugin used on your blog site, 
+# available plugins: disqus, ovo.
+comment = "disqus"
+
+[[params.social]]
+name = "rss"
+url = "/index.xml"
+svg = ""
+
+# Menu.main is an array that's used to decide what entries can be shown
+# on the navigator of yur blog. You can use a weight to make them ordered.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 2
+[[menu.main]]
+name = "Series"
+url = "/series"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+# You can classify your posts by setting taxanomies in the front matter like
+# categories = ["apple", "banana"]
+# series = ["s1", "s2"]
+# tags = ["t1", "t2"]
+# A little suggestion: one post belongs to one series, one category and multiple tags.
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+# Make sure all the codes in a post are highlighted correctly
+# so better not edit this.
+[markup.highlight]
+lineNos = true
+noClasses = false
