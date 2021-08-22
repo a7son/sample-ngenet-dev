@@ -3,28 +3,28 @@ on: [push]
 
 jobs:
 
-build:
-  name: Build
-  runs-on: ubuntu-latest
-  steps:
-  
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
-      with:
-        submodules: true  # Fetch Hugo themes (true OR recursive)
-        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: 'latest'
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-    - name: Build
-      run: hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
 
-    - name: Deploy to Firebase
-      uses: w9jds/firebase-action@master
-      with:
-        args: deploy --only hosting
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}          
+      - name: Build
+        run: hugo
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}          
